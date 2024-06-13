@@ -1,15 +1,16 @@
-// src/App.js
+// src/Wrapper.js
 import React from 'react';
+import { UserProvider } from './UserContext';
 import Navbar from './Navbar';
-import Wrapper from './Wrapper';
 import FormWrapper from './FormWrapper';
-function App() {
+
+const Wrapper = () => {
   return (
-    <Wrapper>
+    <UserProvider>
       <Navbar />
       <FormWrapper />
-    </Wrapper>
+    </UserProvider>
   );
-}
+};
 
-export default App;
+export default Wrapper;
